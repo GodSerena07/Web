@@ -1,16 +1,368 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio</title>
+
+    <title>SHOE STORE</title>
+
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
 </head>
 
-<body>
+<body class="bg-gray-300 text-gray-900">
 
-    <h1>Bienvenido a mi proyecto</h1>
+    <!-- ========================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================= -->
 
-    <p>Esta es mi página principal.</p>
+   <header class="bg-black text-white">
+
+    <div class="max-w-6xl mx-auto px-6 py-4">
+
+        <div class="flex items-center justify-between">
+
+            <!-- Nombre de la tienda -->
+            <h1 class="text-2xl font-bold tracking-wide">
+                SHOE STORE
+            </h1>
+
+            <!-- Menú -->
+            <nav class="hidden md:flex items-center gap-8">
+
+                <a href="#" class="hover:text-gray-400 transition">
+                    Inicio
+                </a>
+
+                <a href="#" class="hover:text-gray-400 transition">
+                    Catálogo
+                </a>
+
+                <a href="#" class="hover:text-gray-400 transition">
+                    Carrito
+                </a>
+
+                <a
+                    href="#"
+                    class="bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition"
+                >
+                    Iniciar sesión
+                </a>
+
+            </nav>
+
+            <!-- Botón móvil -->
+            <button class="md:hidden text-2xl">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+    <!-- ========================= -->
+    <!-- PRESENTACIÓN -->
+    <!-- ========================= -->
+
+    <section class="bg-white">
+
+    <div class="max-w-6xl mx-auto px-6 py-16 text-center">
+
+        <p class="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-3">
+            SHOE STORE
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-5">
+            Encuentra tu próximo par favorito
+        </h2>
+
+        <p class="text-gray-600 max-w-2xl mx-auto">
+            Explora nuestro catálogo de zapatos y encuentra
+            el estilo perfecto para ti.
+        </p>
+
+    </div>
+
+</section>
+
+
+    <!-- ========================= -->
+    <!-- CATÁLOGO -->
+    <!-- ========================= -->
+
+    <main class="max-w-6xl mx-auto px-6 py-10">
+
+        <!-- Título -->
+
+        <div class="mb-8">
+
+            <h2 class="text-2xl font-bold">
+                Catálogo
+            </h2>
+
+            <p class="text-gray-600 mt-1">
+                Explora nuestros productos disponibles
+            </p>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- BUSCADOR Y FILTRO -->
+        <!-- ========================= -->
+
+        <div class="flex flex-col md:flex-row gap-4 mb-8">
+
+            <!-- Buscador -->
+
+            <input
+                type="text"
+                placeholder="Buscar zapatos..."
+                class="w-full md:flex-1 px-4 py-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-black"
+            >
+
+
+            <!-- Categorías -->
+
+            <select
+                class="w-full md:w-56 px-4 py-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-black"
+            >
+
+                <option value="">
+                    Todas las categorías
+                </option>
+
+                <option value="tacones">
+                    Tacones
+                </option>
+
+                <option value="casual">
+                    Casual
+                </option>
+
+                <option value="formales">
+                    Formales
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- PRODUCTOS -->
+        <!-- ========================= -->
+
+        <div class="space-y-6">
+
+
+            <!-- PRODUCTO 1 -->
+
+            <article class="bg-white rounded-xl border border-gray-200 p-4">
+
+                <div class="flex flex-col md:flex-row gap-6">
+
+                    <!-- Imagen -->
+
+                    <div class="w-full md:w-56 h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+
+                        <span class="text-gray-500">
+                            Imagen del producto
+                        </span>
+
+                    </div>
+
+
+                    <!-- Información -->
+
+                    <div class="flex flex-col justify-between flex-1">
+
+                        <div>
+
+                            <p class="text-sm text-gray-500 mb-1">
+                                Tenis deportivos
+                            </p>
+
+                            <h3 class="text-xl font-bold">
+                                Nike Air Max
+                            </h3>
+
+                            <p class="text-gray-600 mt-2">
+                                Tenis deportivos para uso diario,
+                                cómodos y ligeros.
+                            </p>
+
+                        </div>
+
+
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
+
+                            <span class="text-xl font-bold">
+                                $1,899 MXN
+                            </span>
+
+                            <a
+                                href="#"
+                                class="text-center bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800"
+                            >
+                                Ver producto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO 2 -->
+
+            <article class="bg-white rounded-xl border border-gray-200 p-4">
+
+                <div class="flex flex-col md:flex-row gap-6">
+
+                    <!-- Imagen -->
+
+                    <div class="w-full md:w-56 h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+
+                        <span class="text-gray-500">
+                            Imagen del producto
+                        </span>
+
+                    </div>
+
+
+                    <!-- Información -->
+
+                    <div class="flex flex-col justify-between flex-1">
+
+                        <div>
+
+                            <p class="text-sm text-gray-500 mb-1">
+                                Calzado casual
+                            </p>
+
+                            <h3 class="text-xl font-bold">
+                                Adidas Forum
+                            </h3>
+
+                            <p class="text-gray-600 mt-2">
+                                Diseño casual y versátil para
+                                cualquier ocasión.
+                            </p>
+
+                        </div>
+
+
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
+
+                            <span class="text-xl font-bold">
+                                $1,599 MXN
+                            </span>
+
+                            <a
+                                href="#"
+                                class="text-center bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800"
+                            >
+                                Ver producto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO 3 -->
+
+            <article class="bg-white rounded-xl border border-gray-200 p-4">
+
+                <div class="flex flex-col md:flex-row gap-6">
+
+                    <!-- Imagen -->
+
+                    <div class="w-full md:w-56 h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+
+                        <span class="text-gray-500">
+                            Imagen del producto
+                        </span>
+
+                    </div>
+
+
+                    <!-- Información -->
+
+                    <div class="flex flex-col justify-between flex-1">
+
+                        <div>
+
+                            <p class="text-sm text-gray-500 mb-1">
+                                Calzado casual
+                            </p>
+
+                            <h3 class="text-xl font-bold">
+                                Puma Suede
+                            </h3>
+
+                            <p class="text-gray-600 mt-2">
+                                Estilo clásico con un diseño
+                                sencillo y cómodo.
+                            </p>
+
+                        </div>
+
+
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
+
+                            <span class="text-xl font-bold">
+                                $1,299 MXN
+                            </span>
+
+                            <a
+                                href="#"
+                                class="text-center bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800"
+                            >
+                                Ver producto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer class="bg-white border-t border-gray-200 mt-12">
+
+        <div class="max-w-6xl mx-auto px-6 py-6 text-center">
+
+            <p class="text-gray-500 text-sm">
+            pagina desarrollada por el Camaron67
+            </p>
+
+        </div>
+
+    </footer>
 
 </body>
 </html>
