@@ -9,68 +9,19 @@
     <title>SHOE STORE</title>
 
     <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tema.css' %}">
 </head>
+
+<script src="{% static 'js/tema.js' %}"></script>
 
 <body class="bg-gray-300 text-gray-900">
 
-    <!-- ========================= -->
-    <!-- ENCABEZADO -->
-    <!-- ========================= -->
-
-   <header class="bg-black text-white">
-
-    <div class="max-w-6xl mx-auto px-6 py-4">
-
-        <div class="flex items-center justify-between">
-
-            <!-- Nombre de la tienda -->
-            <h1 class="text-2xl font-bold tracking-wide">
-                SHOE STORE
-            </h1>
-
-            <!-- Menú -->
-            <nav class="hidden md:flex items-center gap-8">
-
-                <a href="#" class="hover:text-gray-400 transition">
-                    Inicio
-                </a>
-
-                <a href="#" class="hover:text-gray-400 transition">
-                    Catálogo
-                </a>
-
-                <a href="#" class="hover:text-gray-400 transition">
-                    Carrito
-                </a>
-
-                <a
-                    href="#"
-                    class="bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition"
-                >
-                    Iniciar sesión
-                </a>
-
-            </nav>
-
-            <!-- Botón móvil -->
-            <button class="md:hidden text-2xl">
-                ☰
-            </button>
-
-        </div>
-
-    </div>
-
+<header>
+    {% include 'components/navbar.html' %}
 </header>
 
-
-    <!-- ========================= -->
-    <!-- PRESENTACIÓN -->
-    <!-- ========================= -->
-
-    <section class="bg-white">
-
-    <div class="max-w-6xl mx-auto px-6 py-16 text-center">
+    <section class="hero bg-gray-100 py-20">
+    <div class="text-wrap px-4 py-8 text-center">
 
         <p class="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-3">
             SHOE STORE
@@ -85,18 +36,15 @@
             el estilo perfecto para ti.
         </p>
 
+
     </div>
 
 </section>
 
 
-    <!-- ========================= -->
-    <!-- CATÁLOGO -->
-    <!-- ========================= -->
+
 
     <main class="max-w-6xl mx-auto px-6 py-10">
-
-        <!-- Título -->
 
         <div class="mb-8">
 
@@ -109,11 +57,6 @@
             </p>
 
         </div>
-
-
-        <!-- ========================= -->
-        <!-- BUSCADOR Y FILTRO -->
-        <!-- ========================= -->
 
         <div class="flex flex-col md:flex-row gap-4 mb-8">
 
@@ -168,13 +111,11 @@
 
                     <!-- Imagen -->
 
-                    <div class="w-full md:w-56 h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+                    
+<div class="w-full md:w-56 h-50 rounded-lg overflow-hidden bg-gray-200">
+    <img src="{% static 'img/tenis.jpg' %}" alt="Tenis Nike Air Max" class="w-full h-full object-contain">
 
-                        <span class="text-gray-500">
-                            Imagen del producto
-                        </span>
-
-                    </div>
+</div>
 
 
                     <!-- Información -->
@@ -229,11 +170,10 @@
 
                     <!-- Imagen -->
 
-                    <div class="w-full md:w-56 h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+                    <div class="w-full md:w-56 h-50 bg-gray-200 rounded-lg flex items-center justify-center">
 
-                        <span class="text-gray-500">
-                            Imagen del producto
-                        </span>
+                    <img src="{% static 'img/tenis.jpg' %}" alt="Tenis Nike Air Max" class="w-full h-full object-contain">
+
 
                     </div>
 
@@ -266,8 +206,7 @@
                                 $1,599 MXN
                             </span>
 
-                            <a
-                                href="#"
+                            <a  href="#"
                                 class="text-center bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800"
                             >
                                 Ver producto
@@ -276,7 +215,7 @@
                         </div>
 
                     </div>
-
+                    
                 </div>
 
             </article>
@@ -290,11 +229,10 @@
 
                     <!-- Imagen -->
 
-                    <div class="w-full md:w-56 h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+                    <div class="w-full md:w-56 h-50 bg-gray-200 rounded-lg flex items-center justify-center">
 
-                        <span class="text-gray-500">
-                            Imagen del producto
-                        </span>
+                    <img src="{% static 'img/tenis.jpg' %}" alt="Tenis Nike Air Max" class="w-full h-full object-contain">
+
 
                     </div>
 
@@ -327,10 +265,7 @@
                                 $1,299 MXN
                             </span>
 
-                            <a
-                                href="#"
-                                class="text-center bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800"
-                            >
+                            <a href="#" class="text-center bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800">
                                 Ver producto
                             </a>
 
@@ -345,24 +280,11 @@
 
         </div>
 
+
+        
     </main>
-
-
-    <!-- ========================= -->
-    <!-- FOOTER -->
-    <!-- ========================= -->
-
-    <footer class="bg-white border-t border-gray-200 mt-12">
-
-        <div class="max-w-6xl mx-auto px-6 py-6 text-center">
-
-            <p class="text-gray-500 text-sm">
-            pagina desarrollada por el Camaron67
-            </p>
-
-        </div>
-
+    <footer>
+    {% include 'components/footer.html' %}
     </footer>
-
 </body>
 </html>

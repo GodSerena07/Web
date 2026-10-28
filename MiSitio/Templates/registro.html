@@ -1,0 +1,125 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta | SHOE STORE</title>
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tema.css' %}">
+</head>
+
+<script src="{% static 'js/tema.js' %}"></script>
+
+<body class="min-h-screen bg-gray-100 text-gray-900">
+
+    <header class="bg-black text-white px-6 py-5">
+        <div class="max-w-6xl mx-auto">
+            <a href="{% url 'inicio' %}" class="text-2xl font-bold">
+                {% include 'components/navbar.html' %}
+            </a>
+        </div>
+    </header>
+
+    <main class="min-h-[80vh] bg-white flex items-center justify-center px-4 py-10">
+
+        <section class="w- max-w-md bg-white rounded-2xl shadow-lg p-8">
+
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold">Crear cuenta</h1>
+                <p class="text-gray-500 mt-2">
+                    Regístrate para disfrutar de SHOE STORE
+                </p>
+            </div>
+
+            <form>
+                <div class="mb-4">
+                    <label for="nombre" class="block text-sm font-medium mb-2">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        autocomplete="name"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label for="correo" class="block text-sm font-medium mb-2">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        autocomplete="email"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium mb-2">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Crea una contraseña"
+                        autocomplete="new-password"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                    >
+                </div>
+
+                <div class="mb-6">
+                    <label for="confirmar_password"
+                        class="block text-sm font-medium mb-2">
+                        Confirmar contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmar_password"
+                        name="confirmar_password"
+                        placeholder="Repite tu contraseña"
+                        autocomplete="new-password"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+                    >
+                </div>
+
+                <button
+                    type="button"
+                    class="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
+                >
+                    Crear cuenta
+                </button>
+            </form>
+
+            <p class="text-center text-gray-600 mt-6">
+                ¿Ya tienes una cuenta?
+                <a href="{% url 'login' %}"
+                class="font-semibold text-blue-500 underline">
+                    Inicia sesión
+                </a>
+            </p>
+
+            <div class="text-center mt-6">
+                <a href="{% url 'inicio' %}"
+                class="text-sm text-gray-500 hover:text-black">
+                    ← Volver al inicio
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
